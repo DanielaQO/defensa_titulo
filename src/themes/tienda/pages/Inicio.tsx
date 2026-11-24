@@ -18,11 +18,11 @@ export default function Inicio() {
   return (
     <div>
       <section className="bg-t-red text-t-cream relative overflow-hidden">
-        <div className={`${photo} -left-10 top-10 w-[clamp(140px,18vw,240px)] -rotate-[14deg]`}><img src="assets/p22_1.jpg" alt="" className="w-full h-full object-cover block" /></div>
-        <div className={`${photo} -right-[30px] top-[70px] w-[clamp(130px,16vw,220px)] rotate-12`}><img src="assets/p24_1.jpg" alt="" className="w-full h-full object-cover block" /></div>
+        <div className={`${photo} hidden md:block -left-10 top-10 w-[clamp(140px,18vw,240px)] -rotate-[14deg]`}><img src="assets/p22_1.jpg" alt="" className="w-full h-full object-cover block" /></div>
+        <div className={`${photo} hidden md:block -right-[30px] top-[70px] w-[clamp(130px,16vw,220px)] rotate-12`}><img src="assets/p24_1.jpg" alt="" className="w-full h-full object-cover block" /></div>
         <div className={`${photo} left-[18%] -bottom-[60px] w-[clamp(120px,14vw,200px)] rotate-[9deg]`}><img src="assets/p26_1.jpg" alt="" className="w-full h-full object-cover block" /></div>
         <div className={`${photo} right-[16%] -bottom-[50px] w-[clamp(120px,14vw,200px)] -rotate-[10deg]`}><img src="assets/p28_1.jpg" alt="" className="w-full h-full object-cover block" /></div>
-        <div className="relative max-w-[860px] mx-auto pt-24 px-6 pb-[150px] text-center flex flex-col items-center gap-[22px]">
+        <div className="relative max-w-[860px] mx-auto pt-14 md:pt-24 px-6 pb-[150px] text-center flex flex-col items-center gap-[22px]">
           <div className="text-sm font-semibold">Presentación de título · Técnico en Diseño Digital y Publicitario</div>
           <h1 className="m-0 text-[clamp(42px,6.4vw,86px)] leading-[1.02] font-black tracking-[-0.035em] text-balance">Presentación de Práctica Laboral en Agupa SpA</h1>
           <p className="m-0 text-lg leading-[1.55] max-w-[560px] font-medium">Catálogos digitales, layouts y piezas gráficas para e-commerce y marketplaces.</p>

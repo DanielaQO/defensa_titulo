@@ -4,7 +4,7 @@ export default function Infra() {
   return (
     <section id="infraestructura" className="pt-[14vh] border-t border-p-line">
       <div className="px-7 flex flex-wrap justify-between items-end gap-6 mb-10">
-        <h2 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(56px,10vw,168px)] leading-[0.85]">Infraestructura</h2>
+        <h2 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(40px,10vw,168px)] leading-[0.85]">Infraestructura</h2>
         <div className="max-w-[420px]">
           <div className="text-[13px] font-bold uppercase tracking-[0.1em] text-acc mb-3">04 — Planta física</div>
           <div className="text-[22px] font-bold leading-[1.25]">{empresa.direccion}</div>

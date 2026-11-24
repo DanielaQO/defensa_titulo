@@ -13,10 +13,14 @@ export function Header() {
   };
   return (
     <header className="sticky top-0 z-40 bg-t-red text-t-cream border-b border-t-red-dark">
-      <div className="max-w-[1280px] mx-auto px-6 py-[14px] grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4">
+      <div className="hidden lg:grid max-w-[1280px] mx-auto px-6 py-[14px] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4">
         <nav className={navCls}>{chapters.slice(0, 3).map(link)}</nav>
         <Link to="/tienda/inicio" className="text-[26px] font-black tracking-[-0.03em] whitespace-nowrap">Daniela</Link>
         <nav className={`${navCls} justify-end items-center`}>{chapters.slice(3).map(link)}</nav>
+      </div>
+      <div className="lg:hidden px-4 pt-2.5 pb-1.5 flex flex-col items-center gap-1.5">
+        <Link to="/tienda/inicio" className="text-[22px] font-black tracking-[-0.03em] whitespace-nowrap">Daniela</Link>
+        <nav className={`${navCls} max-w-full`}>{chapters.map(link)}</nav>
       </div>
     </header>
   );
@@ -28,8 +32,8 @@ export function ChapterHero() {
   if (!h) return null;
   return (
     <section className="bg-t-red text-t-cream relative overflow-hidden">
-      <div className="absolute -left-[50px] top-1/2 w-[clamp(110px,13vw,190px)] aspect-square rounded-[26px] overflow-hidden -translate-y-1/2 -rotate-12 shadow-[0_20px_44px_rgba(0,0,0,.3)]"><img src={h.imgA} alt="" className="w-full h-full object-cover block" /></div>
-      <div className="absolute -right-10 top-1/2 w-[clamp(110px,13vw,190px)] aspect-square rounded-[26px] overflow-hidden -translate-y-[40%] rotate-[11deg] shadow-[0_20px_44px_rgba(0,0,0,.3)]"><img src={h.imgB} alt="" className="w-full h-full object-cover block" /></div>
+      <div className="hidden md:block absolute -left-[50px] top-1/2 w-[clamp(110px,13vw,190px)] aspect-square rounded-[26px] overflow-hidden -translate-y-1/2 -rotate-12 shadow-[0_20px_44px_rgba(0,0,0,.3)]"><img src={h.imgA} alt="" className="w-full h-full object-cover block" /></div>
+      <div className="hidden md:block absolute -right-10 top-1/2 w-[clamp(110px,13vw,190px)] aspect-square rounded-[26px] overflow-hidden -translate-y-[40%] rotate-[11deg] shadow-[0_20px_44px_rgba(0,0,0,.3)]"><img src={h.imgB} alt="" className="w-full h-full object-cover block" /></div>
       <div className="relative max-w-[820px] mx-auto px-6 py-16 text-center">
         <div className="text-[13px] font-bold mb-3">{h.kicker}</div>
         <h1 className="m-0 mb-[14px] text-[clamp(38px,5.6vw,72px)] leading-[1.02] font-black tracking-[-0.035em] text-balance">{h.title}</h1>

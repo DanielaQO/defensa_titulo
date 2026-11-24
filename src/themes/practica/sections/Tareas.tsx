@@ -4,7 +4,7 @@ export default function Tareas() {
   return (
     <section id="tareas" className="py-[14vh] px-7 bg-p-ink text-p-bg">
       <div className="flex flex-wrap justify-between items-end gap-6 mb-14">
-        <h2 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(56px,10vw,168px)] leading-[0.85]">Cómo<br />trabajé</h2>
+        <h2 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(40px,10vw,168px)] leading-[0.85]">Cómo<br />trabajé</h2>
         <div className="max-w-[460px] text-base leading-[1.6]">
           <div className="text-[13px] font-bold uppercase tracking-[0.1em] text-p-red-dark mb-3">05 — Proceso de trabajo</div>
           Planificación diaria en conjunto con mi supervisora, con revisión de avances antes del cierre de cada jornada.

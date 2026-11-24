@@ -18,7 +18,7 @@ export default function Trabajos() {
   return (
     <section id="trabajos" className="py-[14vh] px-7 border-t border-p-line">
       <div className="flex flex-wrap justify-between items-end gap-6 mb-10">
-        <h2 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(56px,10vw,168px)] leading-[0.85]">Trabajos<br />realizados <sup className="text-[0.28em] align-top text-acc">{String(list.length).padStart(2, '0')}</sup></h2>
+        <h2 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(40px,10vw,168px)] leading-[0.85]">Trabajos<br />realizados <sup className="text-[0.28em] align-top text-acc">{String(list.length).padStart(2, '0')}</sup></h2>
         <div className="flex flex-col gap-[14px] max-w-[520px]">
           <div className="text-[13px] font-bold uppercase tracking-[0.1em] text-acc">06 — Portafolio de práctica</div>
           <FilterPills options={options} active={active} onPick={setActive}

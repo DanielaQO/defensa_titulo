@@ -11,9 +11,9 @@ export default function Hero({ loaded }: { loaded: boolean }) {
         <span>Presentación de título</span>
         <span>Técnico en Diseño Digital y Publicitario</span>
       </div>
-      <h1 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(72px,16.5vw,280px)] leading-[0.82] tracking-[-0.015em]">
+      <h1 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(44px,calc(18vw-12px),280px)] leading-[0.82] tracking-[-0.015em]">
         {lines.map((t, i) => (
-          <span key={t} className="block overflow-hidden pb-[0.02em]">
+          <span key={t} className="block overflow-hidden pt-[0.16em] -mt-[0.16em] pb-[0.02em]">
             <span className={`block transition-transform duration-[1100ms] ease-expo ${loaded ? 'translate-y-0' : 'translate-y-[105%]'} ${i === 2 ? 'text-acc' : 'text-p-ink'}`}
               style={{ transitionDelay: `${0.08 * i + 0.25}s` }}>{t}</span>
           </span>

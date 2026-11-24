@@ -6,7 +6,7 @@ export default function Equipo() {
   return (
     <section id="equipo" className="py-[14vh] px-7 border-t border-p-line">
       <div className="flex flex-wrap justify-between items-end gap-6 mb-12">
-        <h2 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(56px,10vw,168px)] leading-[0.85]">El equipo</h2>
+        <h2 className="m-0 font-black [font-stretch:62%] uppercase text-[clamp(40px,10vw,168px)] leading-[0.85]">El equipo</h2>
         <div className="max-w-[460px] text-base leading-[1.6] text-p-soft">
           <div className="text-[13px] font-bold uppercase tracking-[0.1em] text-acc mb-3">03 — Recursos humanos y organigrama</div>
           El área de recursos humanos está conformada por una sola profesional, responsable de la gestión del personal y del apoyo transversal a todas las áreas de la empresa.
