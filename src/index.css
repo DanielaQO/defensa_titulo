@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-tienda: "Montserrat", system-ui, sans-serif;
+  --font-practica: "Archivo", system-ui, sans-serif;
+  --font-ecommerce: "Hanken Grotesk", system-ui, sans-serif;
+
+  /* Tienda */
+  --color-t-red: #b3120f;
+  --color-t-red-dark: #8e0c0a;
+  --color-t-cream: #fff7ea;
+  --color-t-ink: #1e1412;
+  --color-t-muted: #5c4a46;
+  --color-t-body: #3d2f2b;
+  --color-t-line: #e3d3c2;
+  --color-t-sand: #f3e8d8;
+  --color-t-yellow: #e2be14;
+
+  /* Practica */
+  --color-p-bg: #0e0d0d;
+  --color-p-ink: #f3f2f2;
+  --color-p-line: #3a3736;
+  --color-p-muted: #8f8b89;
+  --color-p-soft: #c9c5c3;
+  --color-p-dim: #a9a5a3;
+  --color-p-bright: #e6e3e2;
+  --color-p-panel: #1c1a1a;
+  --color-p-red-dark: #ae1800;
+
+  /* Ecommerce */
+  --color-e-ink: #141414;
+  --color-e-line: #ececec;
+  --color-e-gray: #f4f4f2;
+  --color-e-border: #d9d9d6;
+  --color-e-muted: #8a8a8a;
+  --color-e-sub: #bdbdbd;
+
+  /* Originales no fijan line-height: tamaños con nombre usan 'normal' */
+  --text-xs--line-height: normal;
+  --text-sm--line-height: normal;
+  --text-base--line-height: normal;
+  --text-lg--line-height: normal;
+  --text-xl--line-height: normal;
+  --text-2xl--line-height: normal;
+  --text-3xl--line-height: normal;
+  --text-4xl--line-height: normal;
+
+  --ease-expo: cubic-bezier(.19, 1, .22, 1);
+
+  --animate-marquee: marquee var(--marquee-dur, 40s) linear infinite;
+  --animate-bob: bob 1.6s ease-in-out infinite;
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+}
+
+/* Acento runtime: cada tema setea --acc en su wrapper */
+@theme inline {
+  --color-acc: var(--acc);
+}
+
+html, body { margin: 0; }
+/* Originales .dc.html usan defaults del navegador: deshacer preflight para portar valores 1:1 */
+html { line-height: normal; }
+*, ::before, ::after { box-sizing: content-box; }
+button, input, select, textarea { box-sizing: border-box; }
+body { -webkit-font-smoothing: antialiased; }
+button, input { font-family: inherit; }
+a { color: inherit; text-decoration: none; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .animate-bob { animation: none !important; }
+}
