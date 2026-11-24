@@ -122,7 +122,7 @@ export default function Nuevos() {
         <div className="flex-[1_1_320px] min-w-0">
           <div className={`${eyebrow} mb-1.5`}>Proyecto 02 · Mercado Libre</div>
           <h3 className={`${h3} mb-3.5`}>Videos de producto</h3>
-          <p className="m-0 text-base leading-[1.6] text-t-body">Dos videos realizados para las publicaciones de Carry All en Mercado Libre.</p>
+          <p className="m-0 text-base leading-[1.6] text-t-body">Dos videos promocionales realizados para Carry All, para su tienda online y redes sociales.</p>
         </div>
         <div className="flex-[1.4_1_420px] min-w-0 grid grid-cols-2 gap-4">
           {videos.map((x) => (
