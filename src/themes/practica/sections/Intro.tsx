@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const introText = 'El presente informe da a conocer el desarrollo de mi práctica profesional en Agupa SpA, enfocada en el área de e-commerce: piezas gráficas y catálogos digitales para Mercado Libre y marcas como Carry All, Gama y Tozo.';
+const introText = 'Esta presentación da a conocer el desarrollo de mi práctica profesional en Agupa SpA, enfocada en el área de e-commerce: piezas gráficas y catálogos digitales para Mercado Libre y marcas como Carry All, Gama y Tozo.';
 const words = introText.split(' ');
 const N = words.length;
 
@@ -26,7 +26,7 @@ export default function Intro() {
       </p>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10 mt-16 max-w-[1240px] text-[18px] leading-[1.6] text-p-soft">
         <p className="m-0 text-pretty">Esta experiencia permitió aplicar conocimientos de diseño y adaptarse a requerimientos reales del entorno laboral, fortaleciendo habilidades técnicas, creativas y de trabajo con lineamientos de marca.</p>
-        <p className="m-0 text-pretty">En este informe se presentan las actividades realizadas, el contexto del centro de práctica y los principales aprendizajes obtenidos.</p>
+        <p className="m-0 text-pretty">En esta presentación se muestran las actividades realizadas, el contexto del centro de práctica y los principales aprendizajes obtenidos.</p>
       </div>
     </section>
   );

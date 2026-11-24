@@ -15,7 +15,7 @@ export function Loader({ pct, loaded }: { pct: number; loaded: boolean }) {
 
 export function Header({ active, menu, onToggle, onTop }: { active: string; menu: boolean; onToggle: () => void; onTop: () => void }) {
   const cur = sections.findIndex((s) => s.id === active);
-  const label = cur > 0 ? `${String(cur).padStart(2, '0')} — ${sections[cur].label}` : 'Informe de práctica laboral';
+  const label = cur > 0 ? `${String(cur).padStart(2, '0')} — ${sections[cur].label}` : 'Presentación de práctica laboral';
   return (
     <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between gap-4 py-[18px] px-7 mix-blend-difference text-p-ink">
       <button type="button" onClick={() => { onTop(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="cursor-pointer text-[22px] font-black [font-stretch:75%] tracking-[-0.01em] uppercase hover:text-acc">D.Quiñones</button>

@@ -33,7 +33,7 @@ export const brands = [
 export const marketplaces = ['Mercado Libre', 'Falabella', 'Paris', 'Ripley', 'Walmart', 'carryall.cl'];
 
 export const intro = {
-  lead: 'El presente informe tiene como finalidad dar a conocer el desarrollo de la práctica profesional de la carrera de Técnico en Diseño Digital y Publicitario, realizada en la empresa Agupa SpA.',
+  lead: 'Esta presentación tiene como finalidad dar a conocer el desarrollo de la práctica profesional de la carrera de Técnico en Diseño Digital y Publicitario, realizada en la empresa Agupa SpA.',
   parrafos: [
     'Durante este proceso, las funciones se enfocaron en el área de e-commerce, trabajando en plataformas como Mercado Libre, donde se desarrollaron piezas gráficas y se gestionaron catálogos digitales para marcas como Carry All, Gama y Tozo.',
     'Esta experiencia permitió aplicar conocimientos de diseño y adaptarse a requerimientos reales del entorno laboral, fortaleciendo habilidades técnicas, creativas y de trabajo con lineamientos de marca.',

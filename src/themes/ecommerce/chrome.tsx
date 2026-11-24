@@ -53,7 +53,7 @@ export function Footer() {
           <p className="m-0 text-sm leading-[1.6] text-[#4a4a4a] text-pretty">A Agupa SpA por la oportunidad; a mi profesora guía, Desirée Alvarado; a mi tutora de práctica, Rosana; y a mi familia, especialmente a mi madre, Johanna, y a mi pareja, Tomás.</p>
         </div>
         <div>
-          <div className={foot}>Informe</div>
+          <div className={foot}>Presentación</div>
           <div className="flex flex-col gap-2 text-sm items-start">
             {nav.map((n) => <button key={n.id} type="button" onClick={() => scrollToId(n.id, 70)} className="cursor-pointer hover:text-[#6b6b6b]">{n.label}</button>)}
           </div>

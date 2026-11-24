@@ -15,7 +15,7 @@ export default function Hero() {
             <span className={`${lbl} border border-e-ink`}>E-commerce</span>
           </div>
           <div>
-            <h1 className="m-0 mb-5 text-[clamp(44px,6.4vw,92px)] leading-[0.96] font-extrabold tracking-[-0.045em] text-balance">Informe de práctica laboral</h1>
+            <h1 className="m-0 mb-5 text-[clamp(44px,6.4vw,92px)] leading-[0.96] font-extrabold tracking-[-0.045em] text-balance">Presentación de práctica laboral</h1>
             <p className="m-0 mb-7 text-lg leading-[1.55] text-[#4a4a4a] max-w-[460px] text-pretty">Diseño de catálogos digitales, packs de imágenes y piezas gráficas para marketplaces. Una práctica en el área de e-commerce de Agupa SpA.</p>
             <div className="flex gap-[10px] flex-wrap">
               <button type="button" onClick={() => scrollToId('trabajos', 70)} className="h-[52px] px-[26px] bg-e-ink text-white cursor-pointer text-[15px] font-bold flex items-center gap-[10px] hover:bg-[#333333]">Ver trabajos <span>→</span></button>

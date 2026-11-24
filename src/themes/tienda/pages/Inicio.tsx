@@ -24,7 +24,7 @@ export default function Inicio() {
         <div className={`${photo} right-[16%] -bottom-[50px] w-[clamp(120px,14vw,200px)] -rotate-[10deg]`}><img src="assets/p28_1.jpg" alt="" className="w-full h-full object-cover block" /></div>
         <div className="relative max-w-[860px] mx-auto pt-24 px-6 pb-[150px] text-center flex flex-col items-center gap-[22px]">
           <div className="text-sm font-semibold">Presentación de título · Técnico en Diseño Digital y Publicitario</div>
-          <h1 className="m-0 text-[clamp(42px,6.4vw,86px)] leading-[1.02] font-black tracking-[-0.035em] text-balance">Informe de Práctica Laboral en Agupa SpA</h1>
+          <h1 className="m-0 text-[clamp(42px,6.4vw,86px)] leading-[1.02] font-black tracking-[-0.035em] text-balance">Presentación de Práctica Laboral en Agupa SpA</h1>
           <p className="m-0 text-lg leading-[1.55] max-w-[560px] font-medium">Catálogos digitales, layouts y piezas gráficas para e-commerce y marketplaces.</p>
           <div className="flex gap-3 flex-wrap justify-center mt-1.5">
             <button onClick={() => go('introduccion')} className="h-[50px] px-[26px] rounded-full border-0 bg-t-cream text-t-red text-[15px] font-extrabold cursor-pointer hover:bg-white">Comenzar presentación</button>
@@ -107,7 +107,7 @@ export default function Inicio() {
 
       <section className="max-w-[860px] mx-auto py-[72px] px-6">
         <h2 className="m-0 mb-2.5 text-center text-[clamp(30px,3.4vw,44px)] font-black tracking-[-0.03em]">El recorrido</h2>
-        <p className="m-0 mb-7 text-center text-[15px] text-t-muted">La presentación sigue el orden del informe. Usa ← → del teclado para avanzar entre capítulos.</p>
+        <p className="m-0 mb-7 text-center text-[15px] text-t-muted">La presentación está organizada por capítulos. Usa ← → del teclado para avanzar entre capítulos.</p>
         {chapters.map((c, i) => (
           <button key={c.id} onClick={() => go(c.id)} className="w-full flex items-center gap-4 py-[18px] border-0 border-b border-t-line bg-transparent cursor-pointer text-left text-t-ink hover:text-t-red">
             <span className="text-[13px] font-extrabold text-t-red w-7">{num(i)}</span>

@@ -1,6 +1,6 @@
 import { scrollToId } from '../../../lib/scroll';
 
-const lines = ['Informe', 'de práctica', 'laboral.'];
+const lines = ['Presentación', 'de práctica', 'laboral.'];
 const lbl = 'text-xs text-p-muted uppercase tracking-[0.08em] mb-[6px]';
 const val = 'text-[17px] font-semibold';
 
