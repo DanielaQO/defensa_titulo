@@ -3,13 +3,14 @@ import { projects } from '../../../data/projects';
 import { useGallery, wrap } from '../../../hooks/useGallery';
 import { useKey } from '../../../hooks/useKey';
 import Thumbs from '../../../ui/Thumbs';
-import { useTiendaNav } from '../nav';
+import { useTiendaNav, useZoom } from '../nav';
 
 const arrow = 'absolute top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl border-0 bg-t-red text-t-cream text-[20px] font-extrabold cursor-pointer';
 
 export default function Trabajo() {
   const { id } = useParams();
   const { go } = useTiendaNav();
+  const zoom = useZoom();
   const ci = projects.findIndex((p) => p.id === id);
   const p = projects[ci];
   const g = useGallery(p?.imgs.length ?? 1);
@@ -24,7 +25,9 @@ export default function Trabajo() {
       <div className="flex flex-wrap gap-8">
         <div className="flex-[1.4_1_480px] min-w-0 flex flex-col gap-3">
           <div className="relative aspect-square rounded-3xl overflow-hidden bg-white flex items-center justify-center">
-            <img src={p.imgs[g.i] ?? p.imgs[0]} alt={p.title} className="max-w-full max-h-full object-contain block" />
+            <button type="button" aria-label="Ampliar imagen" onClick={() => zoom(p.imgs[g.i] ?? p.imgs[0])} className="w-full h-full p-0 border-0 bg-transparent cursor-zoom-in flex items-center justify-center">
+              <img src={p.imgs[g.i] ?? p.imgs[0]} alt={p.title} className="max-w-full max-h-full object-contain block" />
+            </button>
             <button type="button" aria-label="Anterior" onClick={g.prev} className={`${arrow} left-3.5`}>‹</button>
             <button type="button" aria-label="Siguiente" onClick={g.next} className={`${arrow} right-3.5`}>›</button>
             <span className="absolute bottom-3.5 right-3.5 text-xs font-extrabold py-1.5 px-2.5 rounded-full bg-t-ink text-t-cream">{g.i + 1} / {p.imgs.length}</span>
@@ -47,7 +50,7 @@ export default function Trabajo() {
             <button onClick={() => goRel(-1)} className="flex-[1_1_140px] h-[50px] rounded-full border-2 border-t-red bg-transparent text-t-red text-sm font-extrabold cursor-pointer">← Anterior</button>
             <button onClick={() => goRel(1)} className="flex-[1_1_140px] h-[50px] rounded-full border-0 bg-t-red text-t-cream text-sm font-extrabold cursor-pointer hover:bg-t-red-dark">Siguiente trabajo →</button>
           </div>
-          <div className="text-[13px] text-t-muted">← → para cambiar de imagen</div>
+          <div className="text-[13px] text-t-muted">Haz clic en la imagen para verla en grande · ← → para cambiar de imagen</div>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from '../../ui/Modal';
 import { chapters, heroMap, num, order } from './chapters';
@@ -97,9 +98,17 @@ export function Footer() {
 }
 
 export function Zoom({ src, onClose }: { src: string | null; onClose: () => void }) {
+  // 1er clic en la imagen: tamaño completo con scroll; 2º clic: vuelve a ajustarse a la pantalla.
+  // Clic en el fondo, ✕ o Escape: cerrar.
+  const [full, setFull] = useState(false);
+  useEffect(() => { setFull(false); }, [src]);
   return (
-    <Modal open={!!src} onClose={onClose} closeOnBackdrop className="z-[90] bg-[rgba(30,20,18,.85)] flex items-center justify-center p-6 cursor-zoom-out">
-      <img src={src ?? ''} alt="Ampliación" onClick={onClose} className="max-w-full max-h-full block rounded-xl" />
+    <Modal open={!!src} onClose={onClose} closeOnBackdrop className={`z-[90] bg-[rgba(30,20,18,.88)] overflow-auto flex p-6 ${full ? 'items-start justify-center' : 'items-center justify-center'}`}>
+      <img src={src ?? ''} alt="Ampliación" onClick={() => setFull((f) => !f)}
+        className={`block rounded-xl ${full ? 'max-w-none w-auto h-auto my-auto cursor-zoom-out' : 'max-w-full max-h-full cursor-zoom-in'}`}
+        style={full ? { maxWidth: 'min(100%, 1600px)' } : undefined} />
+      <button type="button" aria-label="Cerrar" onClick={onClose} className="fixed top-4 right-4 w-11 h-11 rounded-full border-0 bg-t-cream text-t-red text-lg font-extrabold cursor-pointer">✕</button>
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 text-xs font-semibold text-t-cream/80 bg-black/40 rounded-full px-3 py-1.5 pointer-events-none whitespace-nowrap">{full ? 'Clic para ajustar a la pantalla' : 'Clic en la imagen para ver a tamaño completo'}</div>
     </Modal>
   );
 }
