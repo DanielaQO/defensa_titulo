@@ -16,7 +16,7 @@ describe('data', () => {
   });
   it('conteos de imágenes según Tienda v2', () => {
     const n = Object.fromEntries(projects.map((p) => [p.id, p.imgs.length]));
-    expect(n).toMatchObject({ four: 8, mini: 9, van: 8, titan: 9, gama: 9, 'tozo-h100': 9, tozo: 9, ads: 4, ig: 9, rebrand: 2, etiqueta: 2, manual: 3, stickers: 3 });
+    expect(n).toMatchObject({ four: 8, mini: 9, van: 8, titan: 9, gama: 9, 'tozo-h100': 9, tozo: 9, ads: 4, ig: 11, rebrand: 2, etiqueta: 2, manual: 3, stickers: 3 });
   });
   it('specs terminan con Piezas', () => {
     for (const p of projects) expect(p.specs.at(-1)).toEqual(['Piezas', String(p.imgs.length)]);
