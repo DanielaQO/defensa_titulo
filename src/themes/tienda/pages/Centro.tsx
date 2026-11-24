@@ -82,17 +82,18 @@ function Rrhh() {
           <div><div className="text-xs font-semibold">{ceo.role}</div><div className="text-base font-extrabold">{ceo.name}</div></div>
         </div>
         <div className="w-0.5 h-7 bg-t-red" />
-        <div className="w-[min(100%,980px)] h-0.5 bg-t-red" />
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-4 w-full mt-0">
-          {deptsOrg.map((d) => (
-            <div key={d.name} className="flex flex-col items-center">
-              <div className="w-0.5 h-6 bg-t-red" />
-              <div className="w-full border-2 border-t-red rounded-[22px] p-4 bg-white flex flex-col gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 w-full items-stretch">
+          {deptsOrg.map((d, i) => (
+            <div key={d.name} className="relative flex flex-col items-center">
+              {/* tramo de la línea horizontal: une el centro de cada área (solo con 3 columnas) */}
+              <div className={`hidden md:block absolute top-0 h-0.5 bg-t-red ${i === 0 ? 'left-1/2 -right-2' : i === deptsOrg.length - 1 ? '-left-2 right-1/2' : '-left-2 -right-2'}`} />
+              <div className="hidden md:block w-0.5 h-6 bg-t-red" />
+              <div className="box-border! w-full flex-1 border-2 border-t-red rounded-[22px] p-4 bg-white flex flex-col gap-3">
                 <div className="text-[15px] font-black text-t-red text-center">{d.name}</div>
-                <div className="text-[13px] leading-[1.5] text-center text-t-body min-h-[58px]">{d.desc}</div>
-                <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-2">
+                <div className="text-[13px] leading-[1.5] text-center text-t-body">{d.desc}</div>
+                <div className="flex flex-wrap justify-center gap-3 mt-auto">
                   {d.people.map((p) => (
-                    <div key={p.id} className="flex flex-col gap-1.5 items-center text-center">
+                    <div key={p.id} className="w-[calc(50%-6px)] max-w-[150px] flex flex-col gap-1.5 items-center text-center">
                       <div className="w-full aspect-square rounded-[14px] overflow-hidden bg-t-sand"><img src={p.photo} alt={p.name} className="w-full h-full object-cover object-[center_25%] block" /></div>
                       <div className="text-[13px] font-extrabold leading-[1.2]">{p.name}</div>
                       {p.tag && <span className="text-[10px] font-extrabold py-[3px] px-2 rounded-full bg-t-red text-t-cream">{p.tag}</span>}
@@ -100,11 +101,13 @@ function Rrhh() {
                   ))}
                 </div>
               </div>
+              {/* conector vertical entre tarjetas apiladas (celular/tablet) */}
+              {i < deptsOrg.length - 1 && <div className="md:hidden w-0.5 h-6 bg-t-red" />}
             </div>
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {levels.map((l) => (
           <div key={l.area} className="bg-white rounded-[18px] p-5">
             <div className="text-xs font-bold text-t-red mb-1.5">{l.area}</div>
