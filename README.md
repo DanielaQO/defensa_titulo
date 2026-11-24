@@ -1,6 +1,8 @@
-# Defensa de práctica — presentaciones
+# Defensa de práctica — presentación
 
-Tres presentaciones de la defensa de práctica (temas Tienda, Práctica y Ecommerce) portadas a React + TypeScript + Tailwind en una sola app.
+Presentación de la defensa de práctica (tema Tienda) en React + TypeScript + Tailwind.
+
+Versión publicada: https://danielaqo.github.io/defensa_titulo/
 
 ## Uso
 
@@ -19,14 +21,11 @@ npm run build   # build de producción en dist/
 ## Rutas (hash)
 
 - `#/` abre Tienda directo (`#/tienda/inicio`)
-- `#/temas` selector de tema
 - `#/tienda/inicio` (y el resto de capítulos de Tienda)
-- `#/practica`
-- `#/ecommerce`
 
 ## Estructura
 
-- `src/data/` contenido único compartido por los tres temas
-- `src/hooks/` hooks reutilizables (galería, filtro, acordeón, teclado, loader, scroll-spy)
-- `src/ui/` componentes visuales compartidos
-- `src/themes/{tienda,practica,ecommerce}/` cada tema
+- `src/data/` contenido de la presentación
+- `src/hooks/` hooks reutilizables (galería, filtro, acordeón, teclado)
+- `src/ui/` componentes visuales reutilizables
+- `src/themes/tienda/` páginas y componentes de la presentación
