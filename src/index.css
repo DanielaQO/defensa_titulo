@@ -47,3 +47,11 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee, .animate-bob { animation: none !important; }
 }
+
+/* Videos: en la página llenan su marco (object-cover), pero en pantalla completa
+   deben verse enteros, sin recorte ni esquinas redondeadas */
+video:fullscreen, video:-webkit-full-screen {
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  background: #000;
+}

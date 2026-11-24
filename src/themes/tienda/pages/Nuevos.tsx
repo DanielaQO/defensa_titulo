@@ -120,7 +120,7 @@ export default function Nuevos() {
 
       <div className="flex flex-wrap gap-10 items-center">
         <div className="flex-[1_1_320px] min-w-0">
-          <div className={`${eyebrow} mb-1.5`}>Proyecto 02 · Mercado Libre</div>
+          <div className={`${eyebrow} mb-1.5`}>Proyecto 02 · Tienda online y redes sociales</div>
           <h3 className={`${h3} mb-3.5`}>Videos de producto</h3>
           <p className="m-0 text-base leading-[1.6] text-t-body">Dos videos promocionales realizados para Carry All, para su tienda online y redes sociales.</p>
         </div>
